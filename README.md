@@ -52,6 +52,39 @@ or
 ```python setup.py install```
 
 
+You can also install Praat like this:
+
+While Windows doesn't come with `wget` by default, you can use PowerShell, which is built into Windows, to download files from the internet. PowerShell's `Invoke-WebRequest` is similar to `wget`. As for adding Praat to the `%PATH%` environment variable, you can do that using the command line as well.
+
+Here's how you can perform both tasks:
+
+Step 1: Download Praat using PowerShell
+
+First, open PowerShell. You might need to run it as an administrator if you're installing software or modifying system settings.
+
+Use the following command in PowerShell to download Praat. You need to replace `https://www.fon.hum.uva.nl/praat/praat6320_win64.zip` with the actual URL of the Praat installer and specify the output folder
+
+```powershell
+Invoke-WebRequest -Uri "https://www.fon.hum.uva.nl/praat/praat6320_win64.zip" -OutFile "C:\Users\name\Downloads\Praat.exe"
+```
+
+Step 2: Unzip and Install Praat
+
+If the downloaded file is a zip file, you'll need to unzip it. In PowerShell, you can use:
+
+```powershell
+Expand-Archive -Path "$HOME\Downloads\praat6320_win64.zip" -DestinationPath "C:\Program Files\Praat"
+```
+
+### Step 3: Add Praat to the Path Environment Variable
+
+You can modify the `Path` environment variable using the command line. Here's how you do it:
+
+```cmd
+setx /M PATH "%PATH%;C:\Program Files\Praat"
+```
+
+This command appends the Praat installation path to the system-wide `Path` variable. The `/M` flag is used to denote that it's a system-wide change, which requires administrator privileges.
 
 Kaldi must be installed beforehand for Kaldi output  
 
