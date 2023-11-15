@@ -54,7 +54,7 @@ or
 
 You can also install Praat like this:
 
-While Windows doesn't come with `wget` by default, you can use PowerShell, which is built into Windows, to download files from the internet. PowerShell's `Invoke-WebRequest` is similar to `wget`. As for adding Praat to the `%PATH%` environment variable, you can do that using the command line as well.
+PowerShell's `Invoke-WebRequest` is similar to `wget`. As for adding Praat to the `%PATH%` environment variable, you can do that using the command line as well.
 
 Here's how you can perform both tasks:
 
