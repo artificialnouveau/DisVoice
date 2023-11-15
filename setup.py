@@ -15,7 +15,7 @@ install_requires = [
                     'pysptk',
                     'phonet',
                     'scipy',
-                    'scikit_learn',
+                    'scikit-learn',
                     ]
 
 HERE = pathlib.Path(__file__).parent
